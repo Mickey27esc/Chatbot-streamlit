@@ -1,0 +1,1 @@
+aparato electrónico capaz de emitir tonos puros ( desprovistos de sonidos armónicos ) a diferentes frecuencias ( ciclos - seg)
