@@ -1,0 +1,1 @@
+Rasgo que permite distinguir el sexo al que pertenece una persona, animal o cosa
