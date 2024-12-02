@@ -21,8 +21,9 @@ def convert_pdf_to_text(folder_path):
         for pdf_file in pdf_files:
             pdf_path = os.path.join(folder_path, pdf_file)
             try:
+                # Leer el archivo PDF
                 reader = PdfReader(pdf_path)
-                text = ""
+                text = pdf_file.replace('.pdf', '') + "\n"  # Añadir el nombre del archivo como la primera línea
                 for page in reader.pages:
                     text += page.extract_text()
                 text_list.append(text)
@@ -82,7 +83,7 @@ def create_persistent_client():
     Crea un cliente persistente de Chroma.
     """
     client = chromadb.PersistentClient(
-        path="test",
+        path="database",
         settings=Settings(),
         tenant=DEFAULT_TENANT,
         database=DEFAULT_DATABASE,
@@ -120,7 +121,7 @@ if __name__ == '__main__':
     print('Cliente creado.')
 
     print('Creando colección en la base de datos...')
-    chroma_collection = chroma_client.create_collection(name='planes-de-estudio-carreras-unam')
+    chroma_collection = chroma_client.create_collection(name='planes-de-estudio')
     print('Colección inicializada.')
 
     print('Añadiendo chunks a la colección...')
