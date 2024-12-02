@@ -1,1 +1,0 @@
-método para generar y analizar copias múltiples de un fragmento de adn

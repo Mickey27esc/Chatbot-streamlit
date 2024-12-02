@@ -1,1 +1,0 @@
-forma de imrt que permite administrar cada tratamiento por sólo unos minutos 

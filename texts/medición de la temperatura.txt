@@ -1,1 +1,0 @@
-método para tomar la temperatura de una persona y determinar si se encuentra o no dentro_de un rango normal
